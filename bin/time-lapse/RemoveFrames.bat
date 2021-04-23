@@ -1,2 +1,2 @@
 @echo off
-del "captured/\*.png"
+del "%temp%/time-lapse/captured/\*.png"
