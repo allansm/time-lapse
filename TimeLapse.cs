@@ -19,18 +19,18 @@ public class TimeLapse{
 		captureGraphics.Dispose();
 	}
 
-	static void Run(int start){
+	static void Run(int start,int factor){
 		int name = start;
 		while(true){
 			Capture(name.ToString("000"));
 			Console.WriteLine(name+".png");
 			name++;
-			System.Threading.Thread.Sleep(33);
+			System.Threading.Thread.Sleep(33*factor);
 		}
 	
 	}
 
 	public static void Main(String[]args){
-		Run(int.Parse(args[0]));
+		Run(int.Parse(args[0]),int.Parse(args[1]));
 	}
 }

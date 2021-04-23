@@ -20,7 +20,9 @@ def run():
         print("...")
 
     chdir("captured")
-
-    system("\"..\\timelapse.exe\" "+str(higher+1))
+    
+    print("note: time increse depending hardware")
+    print("speed 1 = 1 frame per 33ms,\n2 = 1 frame per 66ms,\n ...")
+    system("\"..\\timelapse.exe\" "+str(higher+1)+" "+input("speed (default 1):"))
 
 run()
